@@ -141,7 +141,7 @@ svg {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
-} 
+}
 
 .text-primary-400 {
   color: var(--clr-primary-400);
@@ -294,6 +294,11 @@ body {
     display: none;
   }
 
+  .primary-navigation[data-visible] {
+    display: block;
+    position: fixed;
+  }
+
   .mobile-nav-toggle {
     display: block;
     cursor: pointer;
@@ -301,11 +306,9 @@ body {
     border: 0;
     padding: 0.5em;
   }
-  
+
   .mobile-nav-toggle .icon-close {
     display: none;
   }
-
 }
-
 
