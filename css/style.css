@@ -308,6 +308,8 @@ body {
   .primary-navigation::after {
     content: " ";
     position: absolute;
+    inset: 0;
+    background-image: linear-gradient(red, blue);
   }
 
   .nav-list {
