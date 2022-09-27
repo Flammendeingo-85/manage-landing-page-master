@@ -209,6 +209,22 @@ body {
   font-size: var(--fs-nav);
 }
 
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-accent-400);
+}
+
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
@@ -248,16 +264,6 @@ body {
     background: transparent;
     border: 0;
     padding: 0.5em;
-  }
-
-  .nav-list a {
-    text-decoration: none;
-    color: var(--clr-primary-400);
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus {
-    color: var(--clr-accent-400);
   }
 
   .mobile-nav-toggle .icon-close {
