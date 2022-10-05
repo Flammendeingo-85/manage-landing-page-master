@@ -271,15 +271,17 @@ p[data-width="wide"] {
 /* CTA */
 .cta {
   position: relative;
+  isolation: isolate;
 }
 
 .cta::before {
-  content: '';
-  background-image: url(
-    '/images/bg-tablet-pattern.svg'
-  )
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("/images/bg-tablet-pattern.svg");
+  opacity: 0.1;
 }
-
 
 /* UTILITY CLASSES */
 .visually-hidden {
