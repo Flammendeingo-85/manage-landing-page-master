@@ -142,6 +142,10 @@ p:not([class]) {
   max-width: 32ch;
 }
 
+p[data-width="wide"] {
+  max-width: 42ch;
+}
+
 /* BUTTON */
 .button {
   display: inline-flex;
@@ -240,6 +244,7 @@ p:not([class]) {
 
   .primary-navigation[data-visible] {
     display: block;
+    z-index: 100;
   }
 
   .mobile-nav-toggle {
@@ -263,6 +268,19 @@ p:not([class]) {
   position: fixed;
 }
 
+/* CTA */
+.cta {
+  position: relative;
+}
+
+.cta::before {
+  content: '';
+  background-image: url(
+    '/images/bg-tablet-pattern.svg'
+  )
+}
+
+
 /* UTILITY CLASSES */
 .visually-hidden {
   position: absolute;
@@ -279,13 +297,8 @@ p:not([class]) {
 .container {
   --max-width: 1110px;
   --padding: 1rem;
-
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
-}
-
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 3em);
 }
 
 .even-columns {
@@ -298,6 +311,18 @@ p:not([class]) {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3em);
 }
 
 .text-primary-400 {
